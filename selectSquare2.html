@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #board {
+            display: grid;
+            grid-template-columns: repeat(8, 50px);
+            grid-template-rows: repeat(8, 50px);
+        }
+
+        #board>div {
+            border: 1px solid lightblue;
+        }
+
+        .selected {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="board">
+    </div>
+    <script>
+        let selectedSquareIndex = 7;
+        const size = 64;
+
+        showBoard();
+
+        function showBoard() {
+            const divTag = '<div></div>';
+            const part1 = repeatText(divTag, selectedSquareIndex);
+            const part2 = '<div class="selected"></div>';
+            const lengthPart3 = size - (selectedSquareIndex + 1);
+            const part3 = repeatText(divTag, lengthPart3);
+
+            document.getElementById('board').innerHTML = part1 + part2 + part3;
+        }
+
+        function repeatText(text, count) {
+            return ''.padEnd(text.length * count, text);
+        }
+
+    </script>
+
+</body>
+
+</html>

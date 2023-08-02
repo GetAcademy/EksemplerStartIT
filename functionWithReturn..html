@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <!--
-        "Funksjoner med returverdi"
-        - Enkle eksempler med tall og tekst
-        - (Side)effekter vs returverdi - "hente en cola fra kjøleskapet vs telle hvor mange som er igjen"
-    -->
+    <h3>Funksjoner med returverdi</h3>
+    <ul>
+        <li>Enkle eksempler med tall og tekst - men med litt nye ting fra JavaScript
+            - Er teksten en epostadresse?
+            - Gjennomsnitt
+            - Hangman
+        </li>
+        <li>Annuitetslån https://finansduden.no/terminbelop/ https://www.zensum.no/blogg/terminbelop </li>
+        <li>(Side)effekter vs returverdi - "hente en cola fra kjøleskapet vs telle hvor mange som er igjen" </li>
+        <li>En funksjon kan bare returnere én verdi</li>
+        <li>Forbedre skjema</li>
+        <li>Forbedre select square</li>
+        <li>Trafikklys</li>
+        <li>Primært er vår bruk å lage HTML-deler</li>
+    </ul>
+    <script>
+
+        function calcMonthlyPayment(totalAmount, interest, monthCount) {
+            return totalAmount * (interest / (1 - Math.pow(1 + interest, monthCount)));
+        }
+        /*
+        const a = 6;
+        const b = 7;
+        const c = add(a, b);
+        show(c);
+
+        function show(text) {
+            document.body.innerHTML = text;
+        }
+
+        function add(a, b) {
+            return a + b;
+        }
+
+        function average(a, b) {
+            return (a + b) / 2;
+        }
+
+        function isEmailAddress(text){
+            return text.includes('@');
+        }
+        */
+    </script>
 </body>
+
 </html>
