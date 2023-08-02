@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Har legitimasjon <input type="checkbox" id="hasId" /><br />
+    Ser ut som over 25 <input type="checkbox" id="looksOld" /><br />
+    Alder <br />
+    <input type="number" min="1" max="100" id="age" /><br>
+    <button onclick="buyBeer()">Kjøp øl</button>
+    <div id="app"></div>
+
+    <script>
+        function buyBeer(){
+            const hasId = document.getElementById('hasId').checked;
+            const looksOld = document.getElementById('looksOld').checked;
+            const age = document.getElementById('age').valueAsNumber;
+            document.getElementById('app').innerHTML = /*HTML*/`
+                Har legitimasjon: ${hasId}<br/>
+                Ser ut som over 25: ${looksOld}<br/>
+                Alder: ${age}<br/>
+            `;
+        }
+    </script>
+
+</body>
+
+</html>
